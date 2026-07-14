@@ -1,14 +1,21 @@
 /*
 =======================================================================================
-Bulk load of data into the database from the sources
+Stored Procedure: Bulk load of data into the database from the sources
 =======================================================================================
+Script Purpose:
+    This stored Procedure loads data into 'bronze' schema from external CSV files.
+    It performs the following actions:
+    - Truncates the bronze tables before loading the data
+    - Uses the 'BULK INSERT' command to load data from csv files to bronze tables.
 
+=============================
+NOTE: MACBOOK USERS
+=============================
 Note that on a Macbook, the SQL Server cannot directly access the files on the local machine. The files must be copied to the /tmp directory in order for the SQL Server to access them. This is because the SQL Server is running in a Docker container, which has its own file system that is separate from the host machine's file system. The /tmp directory is a shared directory between the host machine and the Docker container, so it can be used to transfer files between the two environments.
 You can use terminal to copy files from the local machine to the /tmp directory in the Docker container. For example, you can use the following command to copy a file named "cust_info.csv" from the local machine to the /tmp directory in the Docker container:
 cp /path/to/cust_info.csv /tmp/cust_info.csv
 
 Also note that for bulk load on macbook, the data type cannot be date or datetime or any other related data type. The data type must be NVARCHAR or VARCHAR. This is because the SQL Server on Macbook does not support the date and datetime data types for bulk load. Therefore, you will need to change the data type of the columns in the source files to NVARCHAR or VARCHAR before performing the bulk load. Do this load to a stage table and then convert the data type to date or datetime in the final table. This is a workaround for the limitation of the SQL Server on Macbook.
-
 
 -- 1. Drop the staging table if it already exists
 DROP TABLE IF EXISTS #stg_cust_info;
