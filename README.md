@@ -6,7 +6,7 @@ This project basically demonstrates my understanding in building a very comprehe
 
 ---
 
-**Project Requirements**
+### Project Requirements
 
 ### Building the Data Warehouse (Data Engineering)
 
@@ -38,6 +38,6 @@ This project is licensed under the (MIT License). You are free to use, modify an
 
 ### About Me
 
-Hi there. My name is **Peter Takyi Ohemeng**. A petroleum engineer and environmental management professional with the goal of building my data analytic skills to make meaningful impacts in the sectors I find myself in. I am aspring to be an environmental data analysts. My utmost goal is to be able to influence decision-making positively to protect the environment we live in while deriving the safest fullest possible benefits from the extractive industry. 
+Hi there. My name is **Peter Takyi Ohemeng**. A **petroleum engineer** and **environmental management professional** with the goal of building my data analytic skills to make meaningful impacts in the sectors I find myself in. I am aspring to be an environmental data analysts. My utmost goal is to be able to influence decision-making positively to protect the environment we live in while deriving the safest fullest possible benefits from the extractive industry. 
 
 ---
